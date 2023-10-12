@@ -1,0 +1,31 @@
+<html>
+	<head> Gothons From Planet Percal 25# 
+<style>
+table, th, td {
+	border: 1px solid black;
+}
+table.center{
+	margin.left : auto;
+	margin.right: auto
+}
+</style>
+	</head>
+<body>
+	<h1>	Highscore Board </h1>
+	<table class ='center'>
+		<tr>
+			<th>User</th>
+			<th>High scores</th>
+		</tr>
+{% for user, highscore in user_dict.items() %}
+		<tr>
+			<td>{{user}}</td>
+			<td>{{highscore}}</td>
+		</tr>
+{% endfor %}
+	</table>
+	<a href = '/'>Play Again</a>
+</body>
+</html>
+
+

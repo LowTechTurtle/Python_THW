@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1> Login and choose your map </h1>
+
+<br> <br>
+<form action = '/' method = 'POST'>
+	<p>User Name: </p> <br><br>
+	<input type = 'text' name = 'user'> 
+	<p>Password: </p> <br><br>
+	<input type = 'password' name = 'pass'>
+	<br> <br>
+	<input type = 'submit'>
+</form>
+
+{% endblock %}

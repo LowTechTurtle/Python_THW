@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<h1> {{ room.name }} </h1>
+<pre> {{ room.description }} </pre>
+
+{% if room.name in ['death', 'The End'] %}
+<a href = '/'> Play Again </a>
+<a href = '/highscore'>View High Scores Board</a>
+{% else %}
+<form action = '/game' method = 'POST'>
+	Your choice:
+	<br> <br>
+	<input type = 'text' name = 'action' >
+	<br> <br>
+	<input type = 'submit'>
+</form>
+
+
+{% endif %}
+{% endblock %}
